@@ -17,10 +17,11 @@ class InputField extends Component<WrappedFieldProps & IInputFieldProps> {
       placeholder,
       label,
       meta: { touched, error, warning, asyncValidating },
+      
     } = this.props;
     return (
-      <div className="w-full flex flex-row items-baseline">
-           {type!=="hidden" && label && <label className='text-base mr-5 text-gray-700'>{label}</label>}
+      <div className="w-full flex flex-col space-y-2 items-baseline">
+           {type!=="hidden" && label && <label className='text-lg mr-5 text-gray-700'>{label}</label>}
         <div className="flex-col flex-1">
         <div className="flex flex-row rounded-lg bg-gray-200">
           <input
