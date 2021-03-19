@@ -114,7 +114,7 @@ function acl(req: Request, res: Response, next: NextFunction) {
       let isLogged = identity && identity.userId && identity.role !== ROLE.GUEST ? true : false;
       const resource = req.path.replace(/\./g, "_");
       if (!isLogged) {
-        isLogged = ["/", "/register", "/login", "/api/findUser"].includes(resource);
+        isLogged = ["/", "/registration", "/login", "/api/findUser"].includes(resource);
       }
       console.log( "req.method=",req.method,"resource=",resource,"isAllowed?",isLogged );
       const userId = (identity && identity.userId) || null;

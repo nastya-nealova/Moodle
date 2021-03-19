@@ -5,6 +5,10 @@ module.exports = {
   important: false,
   separator: ":",
   theme: {
+    extend:{
+      fontFamily:
+      {serif: ["Montserrat"]}
+    },
     screens: {
       sm: "640px",
       md: "768px",
@@ -643,6 +647,7 @@ module.exports = {
     appearance: ["responsive"],
     backgroundAttachment: ["responsive"],
     backgroundColor: ["responsive", "hover", "focus"],
+    backgroundImage: ["responsive", "hover", "focus"],
     backgroundOpacity: ["responsive", "hover", "focus"],
     backgroundPosition: ["responsive"],
     backgroundRepeat: ["responsive"],
